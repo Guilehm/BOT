@@ -28,4 +28,4 @@ while True:
         pyautogui.press('up')
         seconds = time.clock()
         # print('Time:', seconds)
-        X += 0.55
+        X += 0.9
