@@ -9,24 +9,15 @@ player_color = (83, 83, 83)
 print('starting at 4 seconds...')
 time.sleep(4)
 
-# while True:
-#     screen = ImageGrab.grab()
-#     for x in range(300, 350):
-#         for y in range(383, 460):
-#             color = screen.getpixel((x, y))
-#             if color != (247, 247, 247):
-#                 print(color)
-    # monster = screen.getpixel((280, 450))
-    # print(monster)
 
-def detect_object():
+def detect_object(x1, x2, y1, y2):
     screen = ImageGrab.grab()
-    for x in range(300, 320):
-        for y in range(390, 450):
+    for x in range(x1, x2):
+        for y in range(y1, y2):
             color = screen.getpixel((x, y))
             if color == (83, 83, 83):
                 return True
 
 while True:
-    if detect_object():
+    if detect_object(300, 320, 390, 450):
         pyautogui.press('up')
