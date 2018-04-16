@@ -9,7 +9,7 @@ player_color = (83, 83, 83)
 print('starting at 4 seconds...')
 time.sleep(4)
 
-X = 360.0
+X = 320.0
 
 def detect_object(x1, x2, y1, y2):
     screen = ImageGrab.grab()
@@ -22,4 +22,5 @@ def detect_object(x1, x2, y1, y2):
 while True:
     if detect_object(X, X+20, 390, 450):
         pyautogui.press('up')
-        X += 0.45
+        pyautogui.press('up')
+        X += 0.6
