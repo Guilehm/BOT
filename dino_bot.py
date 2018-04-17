@@ -9,8 +9,6 @@ player_color = (83, 83, 83)
 print('starting at 4 seconds...')
 time.sleep(4)
 
-
-
 X = 330.0
 
 def detect_object(x1, x2, y1, y2):
