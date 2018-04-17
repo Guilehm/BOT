@@ -22,7 +22,7 @@ def detect_object(x1, x2, y1, y2):
                 return True
 
 while True:
-    if detect_object(X, X+25, 380, 420):
+    if detect_object(X, X+26, 380, 420):
         pyautogui.press('up')
         seconds = time.clock()
         # print('Time:', seconds)
