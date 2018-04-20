@@ -4,7 +4,7 @@ import pyautogui
 from PIL import ImageGrab
 
 # bg_color = (247, 247, 247)
-player_color = (83, 83, 83)
+# player_color = (83, 83, 83)
 
 print('starting at 4 seconds...')
 time.sleep(4)
@@ -25,7 +25,7 @@ jumps = 0
 while True:
     if detect_object(X, X+90, 590, 680):
         pyautogui.press('up')
-        seconds = time.clock()
         jumps += 1
-        X += 1.1
-        print('Jumps:', jumps)
+        X += 0.8
+        # print(X)
+        # print('Jumps:', jumps)
