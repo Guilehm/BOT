@@ -1,4 +1,5 @@
 import time
+import _thread
 
 import pyautogui
 from PIL import ImageGrab
@@ -9,7 +10,13 @@ from PIL import ImageGrab
 print('starting at 4 seconds...')
 time.sleep(4)
 
-X = 530.0
+
+def increase(x):
+    while True:
+        x += 0.1
+        print('def increase')
+        time.sleep(1)
+
 
 def detect_object(x1, x2, y1, y2):
     screen = ImageGrab.grab()
@@ -18,14 +25,12 @@ def detect_object(x1, x2, y1, y2):
         for y in range(y1, y2):
             color = screen.getpixel((x, y))
             if color != bg_color:
-                # print(color)
                 return True
 
-jumps = 0
+
+
+X = 530.0
 while True:
+    X += 0.00000000000017
     if detect_object(X, X+90, 590, 680):
         pyautogui.press('up')
-        jumps += 1
-        X += 0.8
-        # print(X)
-        # print('Jumps:', jumps)
